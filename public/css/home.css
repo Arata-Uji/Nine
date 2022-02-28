@@ -1,0 +1,39 @@
+.card-body {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+th {
+    height: 30px;
+}
+
+td {
+    height: 70px;
+}
+
+.today {
+    background: orange !important;
+}
+
+th:nth-of-type(1), td:nth-of-type(1) {
+    color: red;
+}
+
+th:nth-of-type(7), td:nth-of-type(7) {
+    color: blue;
+}
+
+input[type="checkbox"]{
+    transform: scale(2);
+    position: relative;
+    margin: 0 auto;
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+.card-body {
+    text-align: center;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    font-size: 14px;
+}
+
+td {
+    overflow: scroll; /* スクロールする */
+    white-space: nowrap; /* 自動改行しない */
+}
