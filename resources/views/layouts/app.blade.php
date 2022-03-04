@@ -17,12 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    @if (config('app.env') === 'production')
-        <link rel="stylesheet" href="{{ secure_asset('bootstrap.min.css') }}">
-    @else
-        <link rel="stylesheet" href="{{ asset('bootstrap.min.css') }}">
-    @endif
-
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     @yield('style')
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
