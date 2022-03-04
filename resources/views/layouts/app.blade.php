@@ -17,7 +17,12 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    @if (config('app.env') === 'production')
+        <link rel="stylesheet" href="{{ secure_asset('bootstrap.min.css') }}">
+    @else
+        <link rel="stylesheet" href="{{ asset('bootstrap.min.css') }}">
+    @endif
+
     @yield('style')
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -56,30 +61,19 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('location_list') }}">{{ Auth::user()->name }}のマイページ</a>
+                            </li>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        ログアウト
-                                    </a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('location_list') }}">練習場所一覧</a>
+                            </li>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-
-                                    <a class="dropdown-item" href="{{ route('mypage') }}">
-                                        マイページ
-                                    </a>
-
-                                    <a class="dropdown-item" href="{{ route('location_list') }}">
-                                        練習場所一覧
-                                    </a>
-                                </div>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">ログアウト</a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
                             </li>
                         @endguest
                     </ul>

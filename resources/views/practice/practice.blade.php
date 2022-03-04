@@ -44,10 +44,10 @@
                         <input type="button" class="btn btn-secondary btn-sm mb-3" value="全チェックON" onclick="allcheck(true);">
                         <input type="button" class="btn btn-secondary btn-sm mb-3" value="全チェックOFF" onclick="allcheck(false);">
                         {!! $calendar->render() !!}
+                        <a href="{{ route('home') }}" class="btn btn-secondary mb-3">戻る</a>
 						<button type="submit" class="btn btn-primary mb-3">開催場所選択画面へ</button>
 					</form>
 
-                    <a href="{{ route('home') }}">キャンセル</a>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
 </div>
 <script type="text/javascript">
 
-    function allcheck( tf ) {
+    function allcheck(tf) {
 
         var ElementsCount = document.sampleform.elements.length; // チェックボックスの数
 
