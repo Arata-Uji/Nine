@@ -52,7 +52,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:191'],
             'position' => ['required', 'string'],
-            'student_id' => ['required', 'digits:8'],
+            'student_id' => ['required', 'digits:8', 'unique:users'],
             'faculty' => ['required', 'string'],
             'department' => ['string', 'max:191', 'nullable'],
             'enrolled_at' => ['required', 'date', 'after:2019-03-31'],

@@ -19,7 +19,6 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 Route::post('/home/update', [App\Http\Controllers\HomeController::class, 'update'])->name('home.update');
-Route::get('/check', [App\Http\Controllers\HomeController::class, 'check'])->name('check');
 Route::get('/mypage', [App\Http\Controllers\HomeController::class, 'mypage'])->name('mypage');
 Route::get('/location_list', [App\Http\Controllers\HomeController::class, 'locationList'])->name('location_list');
 

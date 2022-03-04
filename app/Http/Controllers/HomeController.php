@@ -66,10 +66,6 @@ class HomeController extends Controller
         return view('mypage', ['grade' => $grade]);
     }
 
-    public function check(){
-        return view('auth.check');
-    }
-
     function update(Request $request){
         $this->validate($request,
         [
