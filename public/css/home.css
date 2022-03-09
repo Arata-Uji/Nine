@@ -31,9 +31,20 @@ th:nth-of-type(7), td:nth-of-type(7) {
     color: blue;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
     transform: scale(2);
     position: relative;
-    margin: 0 auto;
+    margin: 0px auto;
     cursor: pointer;
+}
+
+@media screen and (max-width:767px) {
+    #layer {
+        padding: 0px;
+    }
+
+    .card-body {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }

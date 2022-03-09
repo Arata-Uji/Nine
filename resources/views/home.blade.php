@@ -7,7 +7,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8" id="layer">
             <div class="card">
                 <div class="card-header">HOME</div>
 
@@ -23,7 +23,7 @@
                         <a href="{{ route('list') }}" class="btn btn-primary w-25">登録リスト</a>
                     </div>
 
-                    <h4 class="mb-3" id="calendar">
+                    <h4 class="mb-3">
                         <a href="{{ url('/?date=' . $calendar->getPreviousMonth()) }}">&lt;</a>
                         {{ $calendar->getTitle() }}
                         <a href="{{ url('/?date=' . $calendar->getNextMonth()) }}">&gt;</a>

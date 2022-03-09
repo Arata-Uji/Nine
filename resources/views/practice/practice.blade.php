@@ -7,7 +7,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8" id="layer">
             <div class="card">
                 <div class="card-header">練習登録フォーム</div>
 
@@ -45,7 +45,7 @@
                         <input type="button" class="btn btn-secondary btn-sm mb-3" value="全チェックOFF" onclick="allcheck(false);">
                         {!! $calendar->render() !!}
                         <a href="{{ route('home') }}" class="btn btn-secondary mb-3">戻る</a>
-						<button type="submit" class="btn btn-primary mb-3">開催場所選択画面へ</button>
+						<button type="submit" class="btn btn-primary mb-3">開催場所選択</button>
 					</form>
 
                 </div>

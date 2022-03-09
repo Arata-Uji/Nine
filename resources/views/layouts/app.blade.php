@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     @yield('style')
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -57,7 +58,7 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('location_list') }}">{{ Auth::user()->name }}のマイページ</a>
+                                <a class="nav-link" href="{{ route('mypage') }}">{{ Auth::user()->name }}のマイページ</a>
                             </li>
 
                             <li class="nav-item">

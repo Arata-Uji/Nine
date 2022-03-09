@@ -45,7 +45,7 @@
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        ログイン情報を保存する
+                                        ログインを記憶する
                                     </label>
                                 </div>
                             </div>
